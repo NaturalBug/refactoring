@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
+    "mocha": "^10.0.0",
     "prettier": "^2.7.1"
   }
 }
