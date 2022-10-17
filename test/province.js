@@ -2,7 +2,7 @@ import Province from "../province/province.js";
 import { createRequire } from "module";
 
 const require = createRequire(import.meta.url);
-var assert = require("assert");
+const { expect } = require("chai");
 var mocha = require("mocha");
 var describe = mocha.describe;
 var it = mocha.it;
@@ -10,7 +10,7 @@ var it = mocha.it;
 describe("province", function () {
   it("shortfall", function () {
     const asia = new Province(sampleProvinceData());
-    assert.equal(asia.shortfall, 5);
+    expect(asia.shortfall).equal(5);
   });
 });
 
