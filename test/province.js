@@ -28,6 +28,27 @@ describe("province", function () {
   });
 });
 
+describe("no producer", function () {
+  let noProducers;
+  this.beforeEach(function () {
+    const data = {
+      name: "No producers",
+      producers: [],
+      demand: 30,
+      price: 20,
+    };
+    noProducers = new Province(data);
+  });
+
+  it("shortfall", function () {
+    expect(noProducers.shortfall).equal(30);
+  });
+
+  it("profit", function () {
+    expect(noProducers.profit).equal(0);
+  });
+});
+
 function sampleProvinceData() {
   return {
     name: "Asia",
