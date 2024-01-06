@@ -3,10 +3,6 @@ const organization = new Organization({
     country: 'GB',
 });
 
-function getRawDataOfOrganization() {
-    return organization._data;
-}
-
 function getOrganization() {
     return organization;
 }
@@ -14,5 +10,13 @@ function getOrganization() {
 class Organization {
     constructor(data) {
         this._data = data;
+    }
+
+    set name(aString) {
+        this._data.name = aString;
+    }
+
+    get name() {
+        return this._data.name;
     }
 }
