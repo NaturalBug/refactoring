@@ -29,10 +29,6 @@ function compareUsage(customerID, laterYear, month) {
     return { laterAmount: later, change: later - earlier };
 }
 
-function setUsage(customerID, year, month, amount) {
-    getRawDataOfCustomers()[customerID].usages[year][month] = amount;
-}
-
 function getCustomerData() {
     return customerData;
 }
@@ -46,5 +42,9 @@ function setRawDataOfCustomers(arg) {
 class CustomerData {
     constructor(data) {
         this._data = data;
+    }
+
+    setUsage(customerID, year, month, amount) {
+        this._data[customerID].usages[year][month] = amount;
     }
 }
