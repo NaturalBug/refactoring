@@ -29,6 +29,10 @@ function compareUsage(customerID, laterYear, month) {
     return { laterAmount: later, change: later - earlier };
 }
 
+function setUsage(customerID, year, month, amount) {
+    getRawDataOfCustomers()[customerID].usages[year][month] = amount;
+}
+
 function getCustomerData() {
     return customerData;
 }
