@@ -1,28 +1,28 @@
 {
-  "type": "module",
-  "name": "refactoring",
-  "description": "",
-  "version": "1.0.0",
-  "main": "main.js",
-  "scripts": {
-    "test": "mocha",
-    "format:check": "prettier --check .",
-    "format:write": "prettier --write .",
-    "lint:check": "eslint .",
-    "lint:fix": "eslint --fix ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.local.bridgewell.com:chengying.li/refactoring.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "chai": "^4.3.6",
-    "eslint": "^8.23.1",
-    "eslint-config-prettier": "^8.5.0",
-    "mocha": "^10.0.0",
-    "prettier": "^2.7.1"
-  }
+    "type": "module",
+    "name": "refactoring",
+    "description": "",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "test": "mocha",
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint --fix ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.local.bridgewell.com:chengying.li/refactoring.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "^4.3.6",
+        "eslint": "^8.23.1",
+        "eslint-config-prettier": "^8.5.0",
+        "mocha": "^10.0.0",
+        "prettier": "^2.7.1"
+    }
 }
