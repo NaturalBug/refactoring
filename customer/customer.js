@@ -1,4 +1,4 @@
-const customerData = {
+const customerData = new CustomerData({
     1920: {
         name: 'martin',
         id: '1920',
@@ -20,7 +20,7 @@ const customerData = {
         id: '38673',
         // more customers in a similar form
     },
-};
+});
 
 function compareUsage(customerID, laterYear, month) {
     const later = getRawDataOfCustomers()[customerID].usages[laterYear][month];
@@ -29,9 +29,18 @@ function compareUsage(customerID, laterYear, month) {
     return { laterAmount: later, change: later - earlier };
 }
 
-function getRawDataOfCustomers() {
+function getCustomerData() {
     return customerData;
 }
+function getRawDataOfCustomers() {
+    return customerData._data;
+}
 function setRawDataOfCustomers(arg) {
-    customerData = arg;
+    customerData = new CustomerData(arg);
+}
+
+class CustomerData {
+    constructor(data) {
+        this._data = data;
+    }
 }
